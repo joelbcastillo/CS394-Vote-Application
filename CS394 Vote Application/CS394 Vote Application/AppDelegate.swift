@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  CS394-Most-Popular-Songs
+//  CS394 Vote Application
 //
-//  Created by Joel Castillo on 11/18/14.
-//  Copyright (c) 2014 Joel Castillo. All rights reserved.
+//  Created by Philipp on 11/18/14.
+//  Copyright (c) 2014 Philipp Marsch. All rights reserved.
 //
 
 import UIKit

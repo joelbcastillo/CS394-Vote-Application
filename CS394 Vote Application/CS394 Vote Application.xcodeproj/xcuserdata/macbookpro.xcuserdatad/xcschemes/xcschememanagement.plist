@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CS394-Most-Popular-Songs.xcscheme</key>
+		<key>CS394 Vote Application.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5D87E22D1A1C0B4500C7245C</key>
+		<key>52B3EF751A1C10E000E0A519</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D87E24C1A1C0B4500C7245C</key>
+		<key>52B3EF8A1A1C10E000E0A519</key>
 		<dict>
 			<key>primary</key>
 			<true/>

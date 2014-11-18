@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CS394-Most-Popular-Songs.xcodeproj">
+      location = "self:CS394 Vote Application.xcodeproj">
    </FileRef>
 </Workspace>
