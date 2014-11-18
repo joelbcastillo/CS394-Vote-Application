@@ -1,15 +1,15 @@
 //
-//  CS394_Most_Popular_SongsTests.swift
-//  CS394-Most-Popular-SongsTests
+//  CS394_Vote_ApplicationTests.swift
+//  CS394 Vote ApplicationTests
 //
-//  Created by Joel Castillo on 11/18/14.
-//  Copyright (c) 2014 Joel Castillo. All rights reserved.
+//  Created by Philipp on 11/18/14.
+//  Copyright (c) 2014 Philipp Marsch. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class CS394_Most_Popular_SongsTests: XCTestCase {
+class CS394_Vote_ApplicationTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

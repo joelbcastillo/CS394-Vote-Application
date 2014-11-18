@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D87E22D1A1C0B4500C7245C"
-               BuildableName = "CS394-Most-Popular-Songs.app"
-               BlueprintName = "CS394-Most-Popular-Songs"
-               ReferencedContainer = "container:CS394-Most-Popular-Songs.xcodeproj">
+               BlueprintIdentifier = "52B3EF751A1C10E000E0A519"
+               BuildableName = "CS394 Vote Application.app"
+               BlueprintName = "CS394 Vote Application"
+               ReferencedContainer = "container:CS394 Vote Application.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D87E24C1A1C0B4500C7245C"
-               BuildableName = "CS394-Most-Popular-SongsTests.xctest"
-               BlueprintName = "CS394-Most-Popular-SongsTests"
-               ReferencedContainer = "container:CS394-Most-Popular-Songs.xcodeproj">
+               BlueprintIdentifier = "52B3EF8A1A1C10E000E0A519"
+               BuildableName = "CS394 Vote ApplicationTests.xctest"
+               BlueprintName = "CS394 Vote ApplicationTests"
+               ReferencedContainer = "container:CS394 Vote Application.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D87E24C1A1C0B4500C7245C"
-               BuildableName = "CS394-Most-Popular-SongsTests.xctest"
-               BlueprintName = "CS394-Most-Popular-SongsTests"
-               ReferencedContainer = "container:CS394-Most-Popular-Songs.xcodeproj">
+               BlueprintIdentifier = "52B3EF8A1A1C10E000E0A519"
+               BuildableName = "CS394 Vote ApplicationTests.xctest"
+               BlueprintName = "CS394 Vote ApplicationTests"
+               ReferencedContainer = "container:CS394 Vote Application.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5D87E22D1A1C0B4500C7245C"
-            BuildableName = "CS394-Most-Popular-Songs.app"
-            BlueprintName = "CS394-Most-Popular-Songs"
-            ReferencedContainer = "container:CS394-Most-Popular-Songs.xcodeproj">
+            BlueprintIdentifier = "52B3EF751A1C10E000E0A519"
+            BuildableName = "CS394 Vote Application.app"
+            BlueprintName = "CS394 Vote Application"
+            ReferencedContainer = "container:CS394 Vote Application.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5D87E22D1A1C0B4500C7245C"
-            BuildableName = "CS394-Most-Popular-Songs.app"
-            BlueprintName = "CS394-Most-Popular-Songs"
-            ReferencedContainer = "container:CS394-Most-Popular-Songs.xcodeproj">
+            BlueprintIdentifier = "52B3EF751A1C10E000E0A519"
+            BuildableName = "CS394 Vote Application.app"
+            BlueprintName = "CS394 Vote Application"
+            ReferencedContainer = "container:CS394 Vote Application.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5D87E22D1A1C0B4500C7245C"
-            BuildableName = "CS394-Most-Popular-Songs.app"
-            BlueprintName = "CS394-Most-Popular-Songs"
-            ReferencedContainer = "container:CS394-Most-Popular-Songs.xcodeproj">
+            BlueprintIdentifier = "52B3EF751A1C10E000E0A519"
+            BuildableName = "CS394 Vote Application.app"
+            BlueprintName = "CS394 Vote Application"
+            ReferencedContainer = "container:CS394 Vote Application.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
