@@ -1,0 +1,24 @@
+{
+  "songs" : {
+    "001" : {
+      "artist" : "Taylor Swift",
+      "title" : "Shake It Off"
+    },
+    "002" : {
+      "artist" : "Meghan Trainor",
+      "title" : "All About That Bass"
+    }
+  },
+  "songspicked" : {
+    "001" : {
+      "song" : "001",
+      "user" : "001"
+    }
+  },
+  "user" : {
+    "001" : {
+      "email" : "user1@users.com",
+      "username" : "user1"
+    }
+  }
+}
