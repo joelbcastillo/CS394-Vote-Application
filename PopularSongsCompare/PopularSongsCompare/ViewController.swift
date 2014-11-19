@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var image1: UIImageView!
 
     @IBOutlet weak var image2: UIImageView!
-    
+    var id1:Int?
+    var id2:Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -46,7 +47,7 @@ class ViewController: UIViewController {
 
         songURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             self.title1.text  = snapshot.value["title"] as? String
-            
+            self.id1 = snapshot.value["id"] as? Int
             
         })
         
@@ -58,6 +59,7 @@ class ViewController: UIViewController {
         })
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             self.title2.text  = snapshot.value["title"] as? String
+            self.id2 = snapshot.value["title"] as? Int
         
             
         })
@@ -68,6 +70,36 @@ class ViewController: UIViewController {
             self.image2.image = img
             
         })
+        
+    }
+    
+    @IBAction func selectSong1(sender: UIButton) {
+        
+        //UPDATE
+        var votesURL = myRootRef.childByAppendingPath("feed/entry/\(self.id1)")
+        var votes:Int
+
+        votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
+            votes = snapshot.value["votes"] as? Int?
+        
+        })
+        votes = votes + 1
+        votesUrl.setValue(votes)
+    
+    }
+    
+    @IBAction func selectSong2(sender: UIButton) {
+        
+        //UPDATE
+        var votesURL = myRootRef.childByAppendingPath("feed/entry/\(self.id2)")
+        var votes:Int
+        
+        votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
+            votes = snapshot.value["votes"] as? Int?
+            
+        })
+        votes = votes + 1
+        votesUrl.setValue(votes)
         
     }
 
