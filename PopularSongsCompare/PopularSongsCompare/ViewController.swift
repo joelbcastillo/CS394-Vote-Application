@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var myRootRef = Firebase(url:"https://popularsongscompared.firebaseio.com/")
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
