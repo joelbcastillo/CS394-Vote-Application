@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillVotes()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -69,6 +70,24 @@ class ViewController: UIViewController {
             
         })
         
+    }
+    
+    func fillVotes() {
+        
+        var url : String = "votes/feed/entry/0/votes/"
+            var usersRef = myRootRef.childByAppendingPath(url)
+        var value = "0"
+        usersRef.setValue(value)
+        
+        /*
+        for (var i = 0; i < 99;i++) {
+            url += String(i)
+            url += String("/votes/")
+            var usersRef = myRootRef.childByAppendingPath(url)
+            var value = "0"
+            usersRef.setValue(value)
+            url = "feed/entry/"
+        }*/
     }
 
 }
