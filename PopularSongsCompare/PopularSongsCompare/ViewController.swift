@@ -28,6 +28,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    
+    
+    var imageOneScore = 0
+    var imageTwoScore = 0
+    
     func get_two_songs(){
         var randomIndex1 = 0 //to add
         var randomIndex2  = 3
@@ -39,25 +45,50 @@ class ViewController: UIViewController {
 
         songURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             self.title1  = snapshot.value["title"] as? String
-            
-            
         })
+        
+        songOneLabel.text = self.title1;
+
         
         imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             self.image1 = snapshot.value["href"] as? String
 
         })
+        var url = NSURL(fileURLWithPath: self.image1)
+        var error = NSError?()
+        var imageData = NSData(contentsOfURL: url!)
+        
+        songOneImage = UIImageView(image: UIImage(data: imageData!)  )
+        
+
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             self.title2  = snapshot.value["title"] as? String
-        
-            
         })
+        
+        songTwoLabel.text = self.title2;
+
         
         imageURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             self.image2 = snapshot.value["href"] as? String
             
         })
         
+        url = NSURL(fileURLWithPath: self.image2)
+        imageData = NSData(contentsOfURL: url!)
+        songTwoImage = UIImageView(image: UIImage(data: imageData!)  )
+
+        
+    }
+    
+     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+            for touch: AnyObject in touches{
+                var location = touch.locationInView(self.view)
+                if (location.x >= self.view.frame.size.width/2)
+                {
+                   ++imageOneScore
+                    
+                }
+        }
     }
 
 }

@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="Y8M-xs-Fgy">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PopularSongsCompare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mEO-JS-bYA" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="izM-hn-J7K"/>
+                        <viewControllerLayoutGuide type="bottom" id="l3Y-tz-r6N"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="weY-NB-4lY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWV-Vs-SPt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-Yh-rLt" userLabel="songOneLabel">
                                 <rect key="frame" x="0.0" y="72" width="600" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="1dg-Th-54O"/>
+                                    <constraint firstAttribute="height" constant="46" id="bwe-Go-kgB"/>
+                                    <constraint firstAttribute="width" constant="600" id="mvm-KI-2ZO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Song 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-ph-YNF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGF-hg-7Tl" userLabel="songTwoLabel">
                                 <rect key="frame" x="0.0" y="304" width="600" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="8m5-8L-5uE"/>
+                                    <constraint firstAttribute="width" constant="600" id="NLU-MV-cKD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,12 +40,16 @@
                                     <rect key="frame" x="-100" y="404" width="601" height="46"/>
                                 </variation>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bR-Hc-oGQ">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-lJ-alB">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="DwG-Od-PeJ"/>
+                                    <constraint firstAttribute="height" constant="44" id="ul1-ot-pyR"/>
+                                </constraints>
                                 <items>
-                                    <navigationItem title="Which Song is Better?" id="7sQ-ed-54p">
-                                        <barButtonItem key="rightBarButtonItem" style="done" id="uFM-ce-NCt">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bwo-Nj-WUj">
+                                    <navigationItem title="Which Song is Better?" id="XK0-Am-H0Z">
+                                        <barButtonItem key="rightBarButtonItem" style="done" id="Aco-oB-OiJ">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gaz-90-EW4">
                                                 <rect key="frame" x="538" y="170" width="46" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button">
@@ -50,14 +60,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zRM-f0-iYu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LmT-OC-sav" userLabel="songOneImage">
                                 <rect key="frame" x="215" y="126" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="ERb-OY-2AD"/>
+                                    <constraint firstAttribute="width" secondItem="LmT-OC-sav" secondAttribute="height" multiplier="1:1" id="SQv-Ip-qYI"/>
+                                    <constraint firstAttribute="height" constant="170" id="pbo-My-Ohw"/>
+                                </constraints>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="115" y="226" width="170" height="170"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LEC-N8-ree">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="16a-h8-oT0" userLabel="songTwoImage">
                                 <rect key="frame" x="215" y="358" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="RbR-4B-Pwp"/>
+                                    <constraint firstAttribute="width" secondItem="16a-h8-oT0" secondAttribute="height" multiplier="1:1" id="ccv-Ab-eYM"/>
+                                    <constraint firstAttribute="height" constant="170" id="l9g-2r-W5w"/>
+                                </constraints>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="115" y="458" width="170" height="170"/>
                                 </variation>
@@ -65,45 +85,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="AnA-ye-o06"/>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="top" secondItem="3bR-Hc-oGQ" secondAttribute="bottom" id="JVi-91-ptv"/>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="leading" secondItem="3bR-Hc-oGQ" secondAttribute="leading" id="JWf-5B-13S"/>
-                            <constraint firstAttribute="trailing" secondItem="WWV-Vs-SPt" secondAttribute="trailing" id="JmS-6M-R5A"/>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="centerX" secondItem="LEC-N8-ree" secondAttribute="centerX" id="SpH-Qz-OTq"/>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="centerX" secondItem="zRM-f0-iYu" secondAttribute="centerX" id="YR6-ap-YV4"/>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="trailing" secondItem="MO5-ph-YNF" secondAttribute="trailing" id="nsR-ar-rAe"/>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="trailing" secondItem="3bR-Hc-oGQ" secondAttribute="trailing" id="qrd-rd-3Ty"/>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="leading" secondItem="MO5-ph-YNF" secondAttribute="leading" id="qto-Xq-EuU"/>
-                            <constraint firstItem="zRM-f0-iYu" firstAttribute="top" secondItem="WWV-Vs-SPt" secondAttribute="bottom" constant="8" id="trn-2X-Ohg"/>
-                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="72" id="xmw-TL-nAK"/>
+                            <constraint firstAttribute="centerX" secondItem="LmT-OC-sav" secondAttribute="centerX" id="2QF-LV-OvA"/>
+                            <constraint firstItem="WgO-Yh-rLt" firstAttribute="top" secondItem="EJS-lJ-alB" secondAttribute="bottom" id="9s1-Ud-AIM"/>
+                            <constraint firstAttribute="centerY" secondItem="LmT-OC-sav" secondAttribute="centerY" constant="89" id="BJo-sO-Nhb"/>
+                            <constraint firstAttribute="centerX" secondItem="WgO-Yh-rLt" secondAttribute="centerX" id="Bim-dl-Lgu"/>
+                            <constraint firstAttribute="centerY" secondItem="EJS-lJ-alB" secondAttribute="centerY" constant="250" id="CTE-uW-T03"/>
+                            <constraint firstAttribute="centerX" secondItem="16a-h8-oT0" secondAttribute="centerX" id="EHr-Iq-L6f"/>
+                            <constraint firstAttribute="centerY" secondItem="AGF-hg-7Tl" secondAttribute="centerY" constant="-27" id="HmR-z8-9gd"/>
+                            <constraint firstAttribute="centerX" secondItem="AGF-hg-7Tl" secondAttribute="centerX" id="LwU-uJ-6yD"/>
+                            <constraint firstAttribute="centerY" secondItem="WgO-Yh-rLt" secondAttribute="centerY" constant="205" id="c0U-Yr-tsJ"/>
+                            <constraint firstAttribute="centerX" secondItem="EJS-lJ-alB" secondAttribute="centerX" id="fUS-zA-6xH"/>
+                            <constraint firstItem="WgO-Yh-rLt" firstAttribute="top" secondItem="EJS-lJ-alB" secondAttribute="bottom" id="nAa-FO-AH2"/>
+                            <constraint firstItem="WgO-Yh-rLt" firstAttribute="top" secondItem="EJS-lJ-alB" secondAttribute="bottom" id="xun-Vw-hsl"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="cvs-pH-a2W" kind="modal" identifier="results" id="XUq-Ur-KtP"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sE-Pr-4VA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="303"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="kAl-b5-aOu">
-            <objects>
-                <viewController id="cvs-pH-a2W" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YAe-Nb-StA"/>
-                        <viewControllerLayoutGuide type="bottom" id="5S9-4A-ADh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qPq-Sh-pRl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bxA-k7-ChD"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qZA-2X-3cR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1132" y="303"/>
+            <point key="canvasLocation" x="321" y="366"/>
         </scene>
     </scenes>
 </document>
