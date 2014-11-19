@@ -10,10 +10,10 @@
 		1FBEA7DB1A1C15260075C029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBEA7DA1A1C15260075C029 /* AppDelegate.swift */; };
 		1FBEA7DE1A1C15260075C029 /* PopularSongsCompare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FBEA7DC1A1C15260075C029 /* PopularSongsCompare.xcdatamodeld */; };
 		1FBEA7E01A1C15260075C029 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBEA7DF1A1C15260075C029 /* ViewController.swift */; };
-		1FBEA7E31A1C15260075C029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBEA7E11A1C15260075C029 /* Main.storyboard */; };
 		1FBEA7E51A1C15260075C029 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBEA7E41A1C15260075C029 /* Images.xcassets */; };
 		1FBEA7E81A1C15260075C029 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBEA7E61A1C15260075C029 /* LaunchScreen.xib */; };
 		57D30A08A581CA671AD6CD54 /* libPods-PopularSongsCompare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8813F9FF5B929A5D7ED9F8AB /* libPods-PopularSongsCompare.a */; };
+		66B248FB1A1C222B0084E28A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B248FA1A1C222B0084E28A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +23,12 @@
 		1FBEA7DA1A1C15260075C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FBEA7DD1A1C15260075C029 /* PopularSongsCompare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PopularSongsCompare.xcdatamodel; sourceTree = "<group>"; };
 		1FBEA7DF1A1C15260075C029 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1FBEA7E21A1C15260075C029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FBEA7E41A1C15260075C029 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FBEA7E71A1C15260075C029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1FBEA7F21A1C15260075C029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBEA7F31A1C15260075C029 /* PopularSongsCompareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSongsCompareTests.swift; sourceTree = "<group>"; };
 		201CB1AA62D3F01D70283AC7 /* Pods-PopularSongsCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularSongsCompare.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopularSongsCompare/Pods-PopularSongsCompare.release.xcconfig"; sourceTree = "<group>"; };
+		66B248FA1A1C222B0084E28A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8813F9FF5B929A5D7ED9F8AB /* libPods-PopularSongsCompare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PopularSongsCompare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA67BF8A695A91B3FDA89595 /* Pods-PopularSongsCompare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularSongsCompare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopularSongsCompare/Pods-PopularSongsCompare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +69,7 @@
 			children = (
 				1FBEA7DA1A1C15260075C029 /* AppDelegate.swift */,
 				1FBEA7DF1A1C15260075C029 /* ViewController.swift */,
-				1FBEA7E11A1C15260075C029 /* Main.storyboard */,
+				66B248FA1A1C222B0084E28A /* Main.storyboard */,
 				1FBEA7E41A1C15260075C029 /* Images.xcassets */,
 				1FBEA7E61A1C15260075C029 /* LaunchScreen.xib */,
 				1FBEA7DC1A1C15260075C029 /* PopularSongsCompare.xcdatamodeld */,
@@ -180,9 +180,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBEA7E31A1C15260075C029 /* Main.storyboard in Resources */,
 				1FBEA7E81A1C15260075C029 /* LaunchScreen.xib in Resources */,
 				1FBEA7E51A1C15260075C029 /* Images.xcassets in Resources */,
+				66B248FB1A1C222B0084E28A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,14 +235,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1FBEA7E11A1C15260075C029 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FBEA7E21A1C15260075C029 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1FBEA7E61A1C15260075C029 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

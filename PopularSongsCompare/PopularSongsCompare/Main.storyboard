@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PopularSongsCompare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWV-Vs-SPt">
+                                <rect key="frame" x="0.0" y="72" width="600" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="1dg-Th-54O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Song 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-ph-YNF">
+                                <rect key="frame" x="0.0" y="304" width="600" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-100" y="404" width="601" height="46"/>
+                                </variation>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bR-Hc-oGQ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Which Song is Better?" id="7sQ-ed-54p">
+                                        <barButtonItem key="rightBarButtonItem" style="done" id="uFM-ce-NCt">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bwo-Nj-WUj">
+                                                <rect key="frame" x="538" y="170" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zRM-f0-iYu">
+                                <rect key="frame" x="215" y="126" width="170" height="170"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="115" y="226" width="170" height="170"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LEC-N8-ree">
+                                <rect key="frame" x="215" y="358" width="170" height="170"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="115" y="458" width="170" height="170"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="AnA-ye-o06"/>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="top" secondItem="3bR-Hc-oGQ" secondAttribute="bottom" id="JVi-91-ptv"/>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="leading" secondItem="3bR-Hc-oGQ" secondAttribute="leading" id="JWf-5B-13S"/>
+                            <constraint firstAttribute="trailing" secondItem="WWV-Vs-SPt" secondAttribute="trailing" id="JmS-6M-R5A"/>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="centerX" secondItem="LEC-N8-ree" secondAttribute="centerX" id="SpH-Qz-OTq"/>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="centerX" secondItem="zRM-f0-iYu" secondAttribute="centerX" id="YR6-ap-YV4"/>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="trailing" secondItem="MO5-ph-YNF" secondAttribute="trailing" id="nsR-ar-rAe"/>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="trailing" secondItem="3bR-Hc-oGQ" secondAttribute="trailing" id="qrd-rd-3Ty"/>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="leading" secondItem="MO5-ph-YNF" secondAttribute="leading" id="qto-Xq-EuU"/>
+                            <constraint firstItem="zRM-f0-iYu" firstAttribute="top" secondItem="WWV-Vs-SPt" secondAttribute="bottom" constant="8" id="trn-2X-Ohg"/>
+                            <constraint firstItem="WWV-Vs-SPt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="72" id="xmw-TL-nAK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="cvs-pH-a2W" kind="modal" identifier="results" id="XUq-Ur-KtP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="303"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kAl-b5-aOu">
+            <objects>
+                <viewController id="cvs-pH-a2W" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YAe-Nb-StA"/>
+                        <viewControllerLayoutGuide type="bottom" id="5S9-4A-ADh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qPq-Sh-pRl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bxA-k7-ChD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZA-2X-3cR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="303"/>
+        </scene>
+    </scenes>
+</document>
