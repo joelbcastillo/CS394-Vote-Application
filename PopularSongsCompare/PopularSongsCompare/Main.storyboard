@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mEO-JS-bYA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="Y8M-xs-Fgy">
             <objects>
-                <viewController id="mEO-JS-bYA" sceneMemberID="viewController">
+                <viewController id="mEO-JS-bYA" customClass="ViewController" customModule="PopularSongsCompare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="izM-hn-J7K"/>
                         <viewControllerLayoutGuide type="bottom" id="l3Y-tz-r6N"/>
@@ -55,9 +55,6 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="selectSong:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Izf-Ui-Isw"/>
-                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -111,6 +108,12 @@
                             <constraint firstItem="WgO-Yh-rLt" firstAttribute="top" secondItem="EJS-lJ-alB" secondAttribute="bottom" id="xun-Vw-hsl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="songOneImage" destination="LmT-OC-sav" id="GBl-H5-fPy"/>
+                        <outlet property="songOneLabel" destination="WgO-Yh-rLt" id="llr-pg-GLq"/>
+                        <outlet property="songTwoImage" destination="16a-h8-oT0" id="2gX-Ao-cey"/>
+                        <outlet property="songTwoLabel" destination="AGF-hg-7Tl" id="UjL-hd-Uot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sE-Pr-4VA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

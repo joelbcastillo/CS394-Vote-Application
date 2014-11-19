@@ -31,8 +31,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var songOneLabel: UILabel!
 
+    @IBOutlet weak var songTwoLabel: UILabel!
+    @IBOutlet weak var songOneImage: UIImageView!
     
+    @IBOutlet weak var songTwoImage: UIImageView!
     
     var imageOneScore = 0
     var imageTwoScore = 0
