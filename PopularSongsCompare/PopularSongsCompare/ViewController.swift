@@ -27,10 +27,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func randomIndex() -> Int {
+        return Int(arc4random_uniform(99))
+    }
     func get_two_songs(){
-        var randomIndex1 = 0 //to add
-        var randomIndex2  = 3
+        var randomIndex1 = randomIndex() //to add
+        var randomIndex2  = randomIndex()
+        while randomIndex1 == randomIndex2{
+            randomIndex2 = randomIndex()
+        }
         let songsURL = myRootRef.childByAppendingPath("feed/entry")
         var songURL1 = songsURL.childByAppendingPath(String(randomIndex1))
         var imageURL1 = songURL1.childByAppendingPath("link/1")
