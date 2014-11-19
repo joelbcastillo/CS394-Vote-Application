@@ -9,5 +9,6 @@
 #ifndef PopularSongsCompare_Bridging_Header_PopularSongsCompare_h
 #define PopularSongsCompare_Bridging_Header_PopularSongsCompare_h
 
+#import <Firebase/Firebase.h>
 
 #endif

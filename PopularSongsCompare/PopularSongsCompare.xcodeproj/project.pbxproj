@@ -13,20 +13,11 @@
 		1FBEA7E31A1C15260075C029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBEA7E11A1C15260075C029 /* Main.storyboard */; };
 		1FBEA7E51A1C15260075C029 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBEA7E41A1C15260075C029 /* Images.xcassets */; };
 		1FBEA7E81A1C15260075C029 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBEA7E61A1C15260075C029 /* LaunchScreen.xib */; };
-		1FBEA7F41A1C15260075C029 /* PopularSongsCompareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBEA7F31A1C15260075C029 /* PopularSongsCompareTests.swift */; };
+		57D30A08A581CA671AD6CD54 /* libPods-PopularSongsCompare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8813F9FF5B929A5D7ED9F8AB /* libPods-PopularSongsCompare.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1FBEA7EE1A1C15260075C029 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FBEA7CD1A1C15260075C029 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1FBEA7D41A1C15260075C029;
-			remoteInfo = PopularSongsCompare;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		1F7D0F9D1A1C15A800CDF375 /* Bridging-Header-PopularSongsCompare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header-PopularSongsCompare.h"; sourceTree = "<group>"; };
 		1FBEA7D51A1C15260075C029 /* PopularSongsCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularSongsCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBEA7D91A1C15260075C029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBEA7DA1A1C15260075C029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,9 +26,11 @@
 		1FBEA7E21A1C15260075C029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FBEA7E41A1C15260075C029 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FBEA7E71A1C15260075C029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1FBEA7ED1A1C15260075C029 /* PopularSongsCompareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopularSongsCompareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBEA7F21A1C15260075C029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBEA7F31A1C15260075C029 /* PopularSongsCompareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSongsCompareTests.swift; sourceTree = "<group>"; };
+		201CB1AA62D3F01D70283AC7 /* Pods-PopularSongsCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularSongsCompare.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopularSongsCompare/Pods-PopularSongsCompare.release.xcconfig"; sourceTree = "<group>"; };
+		8813F9FF5B929A5D7ED9F8AB /* libPods-PopularSongsCompare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PopularSongsCompare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA67BF8A695A91B3FDA89595 /* Pods-PopularSongsCompare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularSongsCompare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopularSongsCompare/Pods-PopularSongsCompare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,13 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FBEA7EA1A1C15260075C029 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				57D30A08A581CA671AD6CD54 /* libPods-PopularSongsCompare.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +51,8 @@
 				1FBEA7D71A1C15260075C029 /* PopularSongsCompare */,
 				1FBEA7F01A1C15260075C029 /* PopularSongsCompareTests */,
 				1FBEA7D61A1C15260075C029 /* Products */,
+				A3B8B25691B0A24CFCEC943F /* Pods */,
+				476921A516B27C8BB9CCE036 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				1FBEA7D51A1C15260075C029 /* PopularSongsCompare.app */,
-				1FBEA7ED1A1C15260075C029 /* PopularSongsCompareTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +74,7 @@
 				1FBEA7E61A1C15260075C029 /* LaunchScreen.xib */,
 				1FBEA7DC1A1C15260075C029 /* PopularSongsCompare.xcdatamodeld */,
 				1FBEA7D81A1C15260075C029 /* Supporting Files */,
+				1F7D0F9D1A1C15A800CDF375 /* Bridging-Header-PopularSongsCompare.h */,
 			);
 			path = PopularSongsCompare;
 			sourceTree = "<group>";
@@ -115,6 +104,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		476921A516B27C8BB9CCE036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8813F9FF5B929A5D7ED9F8AB /* libPods-PopularSongsCompare.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3B8B25691B0A24CFCEC943F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA67BF8A695A91B3FDA89595 /* Pods-PopularSongsCompare.debug.xcconfig */,
+				201CB1AA62D3F01D70283AC7 /* Pods-PopularSongsCompare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FBEA7F71A1C15260075C029 /* Build configuration list for PBXNativeTarget "PopularSongsCompare" */;
 			buildPhases = (
+				B71BC0374F95E1E39B4FDFE1 /* Check Pods Manifest.lock */,
 				1FBEA7D11A1C15260075C029 /* Sources */,
 				1FBEA7D21A1C15260075C029 /* Frameworks */,
 				1FBEA7D31A1C15260075C029 /* Resources */,
+				3AF3480805D494BCA4E52E79 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,24 +142,6 @@
 			productName = PopularSongsCompare;
 			productReference = 1FBEA7D51A1C15260075C029 /* PopularSongsCompare.app */;
 			productType = "com.apple.product-type.application";
-		};
-		1FBEA7EC1A1C15260075C029 /* PopularSongsCompareTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1FBEA7FA1A1C15260075C029 /* Build configuration list for PBXNativeTarget "PopularSongsCompareTests" */;
-			buildPhases = (
-				1FBEA7E91A1C15260075C029 /* Sources */,
-				1FBEA7EA1A1C15260075C029 /* Frameworks */,
-				1FBEA7EB1A1C15260075C029 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1FBEA7EF1A1C15260075C029 /* PBXTargetDependency */,
-			);
-			name = PopularSongsCompareTests;
-			productName = PopularSongsCompareTests;
-			productReference = 1FBEA7ED1A1C15260075C029 /* PopularSongsCompareTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -164,10 +154,6 @@
 				TargetAttributes = {
 					1FBEA7D41A1C15260075C029 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					1FBEA7EC1A1C15260075C029 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 1FBEA7D41A1C15260075C029;
 					};
 				};
 			};
@@ -185,7 +171,6 @@
 			projectRoot = "";
 			targets = (
 				1FBEA7D41A1C15260075C029 /* PopularSongsCompare */,
-				1FBEA7EC1A1C15260075C029 /* PopularSongsCompareTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,14 +186,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FBEA7EB1A1C15260075C029 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3AF3480805D494BCA4E52E79 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopularSongsCompare/Pods-PopularSongsCompare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		B71BC0374F95E1E39B4FDFE1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1FBEA7D11A1C15260075C029 /* Sources */ = {
@@ -221,23 +232,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FBEA7E91A1C15260075C029 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FBEA7F41A1C15260075C029 /* PopularSongsCompareTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1FBEA7EF1A1C15260075C029 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1FBEA7D41A1C15260075C029 /* PopularSongsCompare */;
-			targetProxy = 1FBEA7EE1A1C15260075C029 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1FBEA7E11A1C15260075C029 /* Main.storyboard */ = {
@@ -297,6 +292,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "PopularSongsCompare/Bridging-Header-PopularSongsCompare.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +329,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "PopularSongsCompare/Bridging-Header-PopularSongsCompare.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -340,55 +337,27 @@
 		};
 		1FBEA7F81A1C15260075C029 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA67BF8A695A91B3FDA89595 /* Pods-PopularSongsCompare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = PopularSongsCompare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PopularSongsCompare/Bridging-Header-PopularSongsCompare.h";
 			};
 			name = Debug;
 		};
 		1FBEA7F91A1C15260075C029 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 201CB1AA62D3F01D70283AC7 /* Pods-PopularSongsCompare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = PopularSongsCompare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		1FBEA7FB1A1C15260075C029 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PopularSongsCompareTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopularSongsCompare.app/PopularSongsCompare";
-			};
-			name = Debug;
-		};
-		1FBEA7FC1A1C15260075C029 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PopularSongsCompareTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopularSongsCompare.app/PopularSongsCompare";
+				SWIFT_OBJC_BRIDGING_HEADER = "PopularSongsCompare/Bridging-Header-PopularSongsCompare.h";
 			};
 			name = Release;
 		};
@@ -411,14 +380,7 @@
 				1FBEA7F91A1C15260075C029 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		1FBEA7FA1A1C15260075C029 /* Build configuration list for PBXNativeTarget "PopularSongsCompareTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FBEA7FB1A1C15260075C029 /* Debug */,
-				1FBEA7FC1A1C15260075C029 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

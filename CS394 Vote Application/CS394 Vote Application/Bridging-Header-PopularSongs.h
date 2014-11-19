@@ -9,5 +9,5 @@
 #ifndef CS394_Vote_Application_Bridging_Header_PopularSongs_h
 #define CS394_Vote_Application_Bridging_Header_PopularSongs_h
 
-
+#import <Firebase/Firebase.h>
 #endif
