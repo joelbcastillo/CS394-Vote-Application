@@ -78,6 +78,7 @@
 				1FBEA7DC1A1C15260075C029 /* PopularSongsCompare.xcdatamodeld */,
 				1FBEA7D81A1C15260075C029 /* Supporting Files */,
 				1F7D0F9D1A1C15A800CDF375 /* Bridging-Header-PopularSongsCompare.h */,
+				5DD43B7E1A1C229D0052D648 /* BarGraph.swift */,
 			);
 			path = PopularSongsCompare;
 			sourceTree = "<group>";
@@ -229,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD43B7F1A1C229D0052D648 /* BarGraph.swift in Sources */,
 				1FBEA7E01A1C15260075C029 /* ViewController.swift in Sources */,
 				1FBEA7DE1A1C15260075C029 /* PopularSongsCompare.xcdatamodeld in Sources */,
 				1FBEA7DB1A1C15260075C029 /* AppDelegate.swift in Sources */,

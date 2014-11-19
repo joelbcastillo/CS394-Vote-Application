@@ -12,12 +12,15 @@ class ViewController: UIViewController {
     
     let myRootRef = Firebase(url:"https://popularsongscompared.firebaseio.com/")
     
-    var title1:String!
-    var title2:String!
-    var image1:String!
-    var image2:String!
+    @IBOutlet weak var title1: UILabel!
     
+    @IBOutlet weak var title2: UILabel!
 
+    @IBOutlet weak var image1: UIImageView!
+
+    @IBOutlet weak var image2: UIImageView!
+    var id1:Int?
+    var id2:Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,8 +38,11 @@ class ViewController: UIViewController {
     var imageTwoScore = 0
     
     func get_two_songs(){
-        var randomIndex1 = 0 //to add
-        var randomIndex2  = 3
+        var randomIndex1 = randomIndex() //to add
+        var randomIndex2  = randomIndex()
+        while randomIndex1 == randomIndex2{
+            randomIndex2 = randomIndex()
+        }
         let songsURL = myRootRef.childByAppendingPath("feed/entry")
         var songURL1 = songsURL.childByAppendingPath(String(randomIndex1))
         var imageURL1 = songURL1.childByAppendingPath("link/1")
@@ -51,7 +57,9 @@ class ViewController: UIViewController {
 
         
         imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.image1 = snapshot.value["href"] as? String
+            var url = snapshot.value["href"] as? String
+            var imagez = UIImage(named: url!)
+            self.image1.image = imagez
 
         })
         var url = NSURL(fileURLWithPath: self.image1)
@@ -69,9 +77,41 @@ class ViewController: UIViewController {
 
         
         imageURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.image2 = snapshot.value["href"] as? String
+            var url =  snapshot.value["href"] as? String
+            var img = UIImage(named: url!)
+            self.image2.image = img
             
         })
+        
+    }
+    
+    @IBAction func selectSong1(sender: UIButton) {
+        
+        //UPDATE
+        var votesURL = myRootRef.childByAppendingPath("feed/entry/\(self.id1)")
+        var votes:Int
+
+        votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
+            votes = snapshot.value["votes"] as? Int?
+        
+        })
+        votes = votes + 1
+        votesUrl.setValue(votes)
+    
+    }
+    
+    @IBAction func selectSong2(sender: UIButton) {
+        
+        //UPDATE
+        var votesURL = myRootRef.childByAppendingPath("feed/entry/\(self.id2)")
+        var votes:Int
+        
+        votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
+            votes = snapshot.value["votes"] as? Int?
+            
+        })
+        votes = votes + 1
+        votesUrl.setValue(votes)
         
         url = NSURL(fileURLWithPath: self.image2)
         imageData = NSData(contentsOfURL: url!)
