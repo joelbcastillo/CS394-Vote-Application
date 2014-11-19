@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var myRootRef = Firebase(url:"https://popularsongscompared.firebaseio.com/")
+    let myRootRef = Firebase(url:"https://popularsongscompared.firebaseio.com/")
     
-    
+    var title1:String!
+    var title2:String!
+    var image1:String!
+    var image2:String!
     
 
     override func viewDidLoad() {
@@ -24,7 +27,38 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func get_two_songs(){
+        var randomIndex1 = 0 //to add
+        var randomIndex2  = 3
+        let songsURL = myRootRef.childByAppendingPath("feed/entry")
+        var songURL1 = songsURL.childByAppendingPath(String(randomIndex1))
+        var imageURL1 = songURL1.childByAppendingPath("link/1")
+        var songURL2 = songsURL.childByAppendingPath(String(randomIndex2))
+        var imageURL2 = songURL2.childByAppendingPath("link/1")
 
+        songURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
+            self.title1  = snapshot.value["title"] as? String
+            
+            
+        })
+        
+        imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
+            self.image1 = snapshot.value["href"] as? String
+
+        })
+        songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
+            self.title2  = snapshot.value["title"] as? String
+        
+            
+        })
+        
+        imageURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
+            self.image2 = snapshot.value["href"] as? String
+            
+        })
+        
+    }
 
 }
 
