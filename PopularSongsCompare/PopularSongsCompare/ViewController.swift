@@ -12,12 +12,14 @@ class ViewController: UIViewController {
     
     let myRootRef = Firebase(url:"https://popularsongscompared.firebaseio.com/")
     
-    var title1:String!
-    var title2:String!
-    var image1:String!
-    var image2:String!
+    @IBOutlet weak var title1: UILabel!
     
+    @IBOutlet weak var title2: UILabel!
 
+    @IBOutlet weak var image1: UIImageView!
+
+    @IBOutlet weak var image2: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,23 +45,27 @@ class ViewController: UIViewController {
         var imageURL2 = songURL2.childByAppendingPath("link/1")
 
         songURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.title1  = snapshot.value["title"] as? String
+            self.title1.text  = snapshot.value["title"] as? String
             
             
         })
         
         imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.image1 = snapshot.value["href"] as? String
+            var url = snapshot.value["href"] as? String
+            var imagez = UIImage(named: url!)
+            self.image1.image = imagez
 
         })
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.title2  = snapshot.value["title"] as? String
+            self.title2.text  = snapshot.value["title"] as? String
         
             
         })
         
         imageURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.image2 = snapshot.value["href"] as? String
+            var url =  snapshot.value["href"] as? String
+            var img = UIImage(named: url!)
+            self.image2.image = img
             
         })
         
