@@ -27,7 +27,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGF-hg-7Tl" userLabel="songTwoLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGF-hg-7Tl" userLabel="songTwoLabel">
                                 <rect key="frame" x="0.0" y="304" width="600" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="8m5-8L-5uE"/>
@@ -82,15 +82,25 @@
                                     <rect key="frame" x="115" y="458" width="170" height="170"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zRM-f0-iYu">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkU-y8-8iW">
                                 <rect key="frame" x="215" y="126" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="bgG-RU-0Un"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="226" width="170" height="170"/>
-                                </variation>
-                            </imageView>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SongOneButton:" destination="mEO-JS-bYA" eventType="touchUpInside" id="cTW-e2-UFS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keT-B5-0Du">
+                                <rect key="frame" x="215" y="358" width="170" height="170"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SongOneButton:" destination="mEO-JS-bYA" eventType="touchUpInside" id="o2g-4r-Dih"/>
+                                    <action selector="songTwoButton:" destination="mEO-JS-bYA" eventType="touchUpInside" id="okZ-37-0uX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
