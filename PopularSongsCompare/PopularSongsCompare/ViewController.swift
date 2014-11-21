@@ -67,10 +67,11 @@ class ViewController: UIViewController {
         var randomIndex1 : Int
         var randomIndex2 : Int
         
-      
-        while randomIndex1 == randomIndex2{
+        randomIndex1 = randomIndex()
+        
+        do {
             randomIndex2 = randomIndex()
-        }
+        } while randomIndex1 == randomIndex2
         
         let songsURL = myRootRef.childByAppendingPath("feed/entry")
         var songURL1 = songsURL.childByAppendingPath(String(randomIndex1))
