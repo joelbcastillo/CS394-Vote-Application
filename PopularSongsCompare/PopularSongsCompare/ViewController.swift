@@ -73,12 +73,15 @@ class ViewController: UIViewController {
             randomIndex2 = randomIndex()
         } while randomIndex1 == randomIndex2
         
-        let songsURL = myRootRef.childByAppendingPath("feed/entry")
-        var songURL1 = songsURL.childByAppendingPath(String(randomIndex1))
-        var imageURL1 = songURL1.childByAppendingPath("link/1")
-        var songURL2 = songsURL.childByAppendingPath(String(randomIndex2))
-        var imageURL2 = songURL2.childByAppendingPath("link/1")
+        let top100SongsURL = myRootRef.childByAppendingPath("feed/entry")
+        
+        var songURL1 = top100SongsURL.childByAppendingPath(String(randomIndex1))
+        var imageURL1 = songURL1.childByAppendingPath("im:image/2")
+        var songURL2 = top100SongsURL.childByAppendingPath(String(randomIndex2))
+        var imageURL2 = songURL2.childByAppendingPath("im:image/2")
 
+        println("debug description" + imageURL1.debugDescription)
+        
         songURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var title  = snapshot.value["title"] as? String
             self.songOneLabel.text = title
@@ -86,15 +89,14 @@ class ViewController: UIViewController {
    
         // songOneLabel.text = self.title1.text;
    
-        var url : String? = ""
         imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            url = snapshot.value["href"] as? String
+            var url = snapshot.value["label"] as? String
+            println("url: " + url!)
             var imagez = UIImage(named: url!)
             self.songOneImage.image = imagez
-
         })
         
-        println("url: " + url!)
+
         
 
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
@@ -105,7 +107,7 @@ class ViewController: UIViewController {
 
         
         imageURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            var url =  snapshot.value["href"] as? String
+            var url =  snapshot.value["label"] as? String
             var img = UIImage(named: url!)
             self.songTwoImage.image = img
             
