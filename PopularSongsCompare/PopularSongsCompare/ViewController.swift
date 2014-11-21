@@ -75,43 +75,45 @@ class ViewController: UIViewController {
         
         let top100SongsURL = myRootRef.childByAppendingPath("feed/entry")
         
-        var songURL1 = top100SongsURL.childByAppendingPath(String(randomIndex1))
+        var songURL1 = top100SongsURL.childByAppendingPath(String(randomIndex1) + "/title")
         var imageURL1 = songURL1.childByAppendingPath("im:image/2")
-        var songURL2 = top100SongsURL.childByAppendingPath(String(randomIndex2))
+        var songURL2 = top100SongsURL.childByAppendingPath(String(randomIndex2) + "/title")
         var imageURL2 = songURL2.childByAppendingPath("im:image/2")
 
         println("debug description" + imageURL1.debugDescription)
         
         songURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            var title  = snapshot.value["title"] as? String
+            var title  = snapshot.value["label"] as? String
             self.songOneLabel.text = title
         })
-   
-        // songOneLabel.text = self.title1.text;
-   
+      /*
         imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var url = snapshot.value["label"] as? String
             println("url: " + url!)
-            var imagez = UIImage(named: url!)
-            self.songOneImage.image = imagez
+            
+            let nsurl = NSURL(fileURLWithPath: url!);
+            var err: NSError?
+            var imageData : NSData = NSData(contentsOfURL: nsurl!)!
+            // !, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err!)
+            self.songOneImage.image = UIImage(data:imageData)
+
         })
-        
+        */
 
         
 
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.songTwoLabel.text  = snapshot.value["title"] as? String
+            self.songTwoLabel.text  = snapshot.value["lable"] as? String
+            var title  = snapshot.value["label"] as? String
+            self.songTwoLabel.text = title
         })
-        
-        // songTwoLabel.text = self.title2.text;
-
-        
+        /*
         imageURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var url =  snapshot.value["label"] as? String
             var img = UIImage(named: url!)
             self.songTwoImage.image = img
             
-        })
+        })*/
         
     }
      override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
