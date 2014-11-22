@@ -43,6 +43,12 @@ class ViewController: UIViewController {
         votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             votes = snapshot.value["votes"] as Int
             
+            /*
+            var votes = snapshot.value["votes"] as Int
+            println("votes: " + String(votes))
+            votes = votes + 1
+            votesURL.setValue(votes)
+*/
         })
         votes = votes + 1
         votesURL.setValue(votes)
@@ -76,32 +82,34 @@ class ViewController: UIViewController {
         let top100SongsURL = myRootRef.childByAppendingPath("feed/entry")
         
         var songURL1 = top100SongsURL.childByAppendingPath(String(randomIndex1) + "/title")
-        var imageURL1 = songURL1.childByAppendingPath("im:image/2")
+        var imageURL1 = top100SongsURL.childByAppendingPath(String(randomIndex1) + "/im:image/2")
         var songURL2 = top100SongsURL.childByAppendingPath(String(randomIndex2) + "/title")
-        var imageURL2 = songURL2.childByAppendingPath("im:image/2")
+        var imageURL2 = top100SongsURL.childByAppendingPath(String(randomIndex2) + "/im:image/2")
 
-        println("debug description" + imageURL1.debugDescription)
+
+        // println("debug description" + imageURL1.debugDescription)
         
         songURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var title  = snapshot.value["label"] as? String
             self.songOneLabel.text = title
         })
-      /*
+      
         imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var url = snapshot.value["label"] as? String
+            
             println("url: " + url!)
             
             let nsurl = NSURL(fileURLWithPath: url!);
             var err: NSError?
-            var imageData : NSData = NSData(contentsOfURL: nsurl!)!
+            var imageData : NSData? = NSData(contentsOfURL: nsurl!)
             // !, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err!)
-            self.songOneImage.image = UIImage(data:imageData)
+            var image : UIImage? = UIImage(data:imageData!)
+            self.songOneImage.image = UIImage(data:imageData!)
+            
+
 
         })
-        */
-
-        
-
+    
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             self.songTwoLabel.text  = snapshot.value["lable"] as? String
             var title  = snapshot.value["label"] as? String
