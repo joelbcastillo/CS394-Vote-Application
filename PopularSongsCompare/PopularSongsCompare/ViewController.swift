@@ -47,6 +47,7 @@ class ViewController: UIViewController {
                 println("votes: " + String(votes!))
                 votes = votes! + 1
                 votesURL.setValue(votes!)
+                println("votes changed")
             } else {
                 println("votes == nil")
             }
@@ -70,8 +71,8 @@ class ViewController: UIViewController {
     }
     
     func get_two_songs(){
-        
-        self.id1 = randomIndex()
+        self.id1 = 0
+            //randomIndex()
         
         do {
             self.id2 = randomIndex()
@@ -139,6 +140,26 @@ class ViewController: UIViewController {
     func randomIndex() -> Int {
         return Int(arc4random_uniform(99))
     }
+    
+    func fillVotes() {
+        /*
+        var url : String = "feed/entry/0/votes/"
+        var usersRef = myRootRef.childByAppendingPath(url)
+        var value = "0"
+        usersRef.setValue(value)
+        */
+        
+        var url : String = "feed/entry/"
+        for (var i = 0; i < 99;i++) {
+        url += String(i)
+        url += String("/votes/")
+        var usersRef = myRootRef.childByAppendingPath(url)
+        var value = "0"
+        usersRef.setValue(value)
+        url = "feed/entry/"
+        }
+    }
+
 
 }
 
