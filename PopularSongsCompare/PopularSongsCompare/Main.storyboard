@@ -59,6 +59,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keT-B5-0Du">
+                                <rect key="frame" x="215" y="358" width="170" height="170"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="songTwoButton:" destination="mEO-JS-bYA" eventType="touchUpInside" id="ITA-u3-u7g"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkU-y8-8iW">
                                 <rect key="frame" x="215" y="126" width="170" height="170"/>
                                 <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,17 +77,6 @@
                                 </constraints>
                                 <connections>
                                     <action selector="SongOneButton:" destination="mEO-JS-bYA" eventType="touchUpInside" id="cTW-e2-UFS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keT-B5-0Du">
-                                <rect key="frame" x="215" y="358" width="170" height="170"/>
-                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="SongOneButton:" destination="mEO-JS-bYA" eventType="touchUpInside" id="o2g-4r-Dih"/>
-                                    <action selector="songTwoButton:" destination="mEO-JS-bYA" eventType="touchUpInside" id="okZ-37-0uX"/>
                                 </connections>
                             </button>
                         </subviews>

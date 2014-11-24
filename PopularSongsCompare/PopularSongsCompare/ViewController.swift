@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var songOneButton: UIButton!
     @IBOutlet weak var songTwoButton: UIButton!
 
-    // TODO call random numbers
     var id1 = 2
     var id2 = 1
     
@@ -38,26 +37,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SongOneButton(sender: AnyObject) {
-        var votesURL = myRootRef.childByAppendingPath("feed/entry/\(self.id1)")
-        // TODO: Votes gets instantiated every time this method will be accessed
-        var votes:Int = 0;
-
+        var votesURL = myRootRef.childByAppendingPath("feed/entry/\(String(self.id1))")
+        var votes : Int? = 0
         votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-/*            votes = snapshot.value["votes"] as Int
-            
-            
-            var votes = snapshot.value["votes"] as Int
-            println("votes: " + String(votes))
-            votes = votes + 1
-            votesURL.setValue(votes)
-*/
+           votes = snapshot.value["votes"] as? Int
+            println("url: " + votesURL.debugDescription)
+            if (votes != nil) {
+                // var votes = snapshot.value["votes"] as Int
+                println("votes: " + String(votes!))
+                votes = votes! + 1
+                votesURL.setValue(votes!)
+            } else {
+                println("votes == nil")
+            }
         })
-        votes = votes + 1
+//        votes = votes + 1
         votesURL.setValue(votes)
     }
     
     @IBAction func songTwoButton(sender: AnyObject) {
-        var votesURL = myRootRef.childByAppendingPath("feed/entry/\(self.id2)")
+        var votesURL = myRootRef.childByAppendingPath("feed/entry/\(String(self.id2))")
         var votes:Int = 0
         
         votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
@@ -72,54 +71,57 @@ class ViewController: UIViewController {
     
     func get_two_songs(){
         
-        var randomIndex1 : Int
-        var randomIndex2 : Int
-        
-        randomIndex1 = randomIndex()
+        self.id1 = randomIndex()
         
         do {
-            randomIndex2 = randomIndex()
-        } while randomIndex1 == randomIndex2
+            self.id2 = randomIndex()
+        } while self.id1 == self.id2
         
         let top100SongsURL = myRootRef.childByAppendingPath("feed/entry")
         
-        var songURL1 = top100SongsURL.childByAppendingPath(String(randomIndex1) + "/title")
-        var imageURL1 = top100SongsURL.childByAppendingPath(String(randomIndex1) + "/im:image/2")
-        var songURL2 = top100SongsURL.childByAppendingPath(String(randomIndex2) + "/title")
-        var imageURL2 = top100SongsURL.childByAppendingPath(String(randomIndex2) + "/im:image/2")
+        var songURL1 = top100SongsURL.childByAppendingPath(String(self.id1) + "/title")
+        var imageURL1 = top100SongsURL.childByAppendingPath(String(self.id1) + "/im:image/2")
+        var songURL2 = top100SongsURL.childByAppendingPath(String(self.id2) + "/title")
+        var imageURL2 = top100SongsURL.childByAppendingPath(String(self.id2) + "/im:image/2")
 
 
         // println("debug description" + imageURL1.debugDescription)
         
         songURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var title  = snapshot.value["label"] as? String
-            self.songOneLabel.text = title
+            if (title != nil ) {
+                self.songOneLabel.text = title
+            }
+
         })
       
         imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var url = snapshot.value["label"] as? String
-            let nsurl = NSURL(string: url!);
-            var err: NSError?
-            var imageData : NSData? = NSData(contentsOfURL: nsurl!)
-            var image : UIImage? = UIImage(data:imageData!)
-            self.songOneButton.setBackgroundImage(UIImage(data:imageData!), forState: UIControlState.Normal)
-
-//            self.songOneImage.image = UIImage(data:imageData!)
+            if (url != nil) {
+                let nsurl = NSURL(string: url!);
+                var err: NSError?
+                var imageData : NSData? = NSData(contentsOfURL: nsurl!)
+                var image : UIImage? = UIImage(data:imageData!)
+                self.songOneButton.setBackgroundImage(UIImage(data:imageData!), forState: UIControlState.Normal)
+            }
         })
     
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.songTwoLabel.text  = snapshot.value["lable"] as? String
             var title  = snapshot.value["label"] as? String
-            self.songTwoLabel.text = title
+            if (title != nil ) {
+                self.songTwoLabel.text = title
+            }
         })
         
         imageURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var url = snapshot.value["label"] as? String
-            let nsurl = NSURL(string: url!);
-            var err: NSError?
-            var imageData : NSData? = NSData(contentsOfURL: nsurl!)
-            var image : UIImage? = UIImage(data:imageData!)
-            self.songTwoButton.setBackgroundImage(UIImage(data:imageData!), forState: UIControlState.Normal)
+            if (url != nil) {
+                let nsurl = NSURL(string: url!);
+                var err: NSError?
+                var imageData : NSData? = NSData(contentsOfURL: nsurl!)
+                var image : UIImage? = UIImage(data:imageData!)
+                self.songTwoButton.setBackgroundImage(UIImage(data:imageData!), forState: UIControlState.Normal)
+            }
         })
         
     }
