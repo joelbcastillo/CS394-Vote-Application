@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var songTwoLabel: UILabel!
     @IBOutlet weak var songOneImage: UIImageView!
     @IBOutlet weak var songTwoImage: UIImageView!
+    @IBOutlet weak var songOneButton: UIButton!
+    @IBOutlet weak var songTwoButton: UIButton!
 
     // TODO call random numbers
     var id1 = 2
@@ -39,11 +41,11 @@ class ViewController: UIViewController {
         var votesURL = myRootRef.childByAppendingPath("feed/entry/\(self.id1)")
         // TODO: Votes gets instantiated every time this method will be accessed
         var votes:Int = 0;
-        
+
         votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            votes = snapshot.value["votes"] as Int
+/*            votes = snapshot.value["votes"] as Int
             
-            /*
+            
             var votes = snapshot.value["votes"] as Int
             println("votes: " + String(votes))
             votes = votes + 1
@@ -59,7 +61,7 @@ class ViewController: UIViewController {
         var votes:Int = 0
         
         votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            votes = snapshot.value["votes"] as Int
+//            votes = snapshot.value["votes"] as Int
             
         })
         
@@ -100,7 +102,9 @@ class ViewController: UIViewController {
             var err: NSError?
             var imageData : NSData? = NSData(contentsOfURL: nsurl!)
             var image : UIImage? = UIImage(data:imageData!)
-            self.songOneImage.image = UIImage(data:imageData!)
+            self.songOneButton.setBackgroundImage(UIImage(data:imageData!), forState: UIControlState.Normal)
+
+//            self.songOneImage.image = UIImage(data:imageData!)
         })
     
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
@@ -115,7 +119,7 @@ class ViewController: UIViewController {
             var err: NSError?
             var imageData : NSData? = NSData(contentsOfURL: nsurl!)
             var image : UIImage? = UIImage(data:imageData!)
-            self.songTwoImage.image = UIImage(data:imageData!)
+            self.songTwoButton.setBackgroundImage(UIImage(data:imageData!), forState: UIControlState.Normal)
         })
         
     }

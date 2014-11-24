@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mEO-JS-bYA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -60,39 +59,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LmT-OC-sav" userLabel="songOneImage">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkU-y8-8iW">
                                 <rect key="frame" x="215" y="126" width="170" height="170"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="ERb-OY-2AD"/>
-                                    <constraint firstAttribute="width" secondItem="LmT-OC-sav" secondAttribute="height" multiplier="1:1" id="SQv-Ip-qYI"/>
-                                    <constraint firstAttribute="height" constant="170" id="pbo-My-Ohw"/>
+                                    <constraint firstAttribute="width" constant="170" id="n4R-4L-U2z"/>
                                 </constraints>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="226" width="170" height="170"/>
-                                </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="16a-h8-oT0" userLabel="songTwoImage">
-                                <rect key="frame" x="215" y="358" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="RbR-4B-Pwp"/>
-                                    <constraint firstAttribute="width" secondItem="16a-h8-oT0" secondAttribute="height" multiplier="1:1" id="ccv-Ab-eYM"/>
-                                    <constraint firstAttribute="height" constant="170" id="l9g-2r-W5w"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="458" width="170" height="170"/>
-                                </variation>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkU-y8-8iW">
-                                <rect key="frame" x="215" y="126" width="170" height="170"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
                                     <action selector="SongOneButton:" destination="mEO-JS-bYA" eventType="touchUpInside" id="cTW-e2-UFS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keT-B5-0Du">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keT-B5-0Du">
                                 <rect key="frame" x="215" y="358" width="170" height="170"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -104,24 +83,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="LmT-OC-sav" secondAttribute="centerX" id="2QF-LV-OvA"/>
                             <constraint firstItem="WgO-Yh-rLt" firstAttribute="top" secondItem="EJS-lJ-alB" secondAttribute="bottom" id="9s1-Ud-AIM"/>
-                            <constraint firstAttribute="centerY" secondItem="LmT-OC-sav" secondAttribute="centerY" constant="89" id="BJo-sO-Nhb"/>
                             <constraint firstAttribute="centerX" secondItem="WgO-Yh-rLt" secondAttribute="centerX" id="Bim-dl-Lgu"/>
                             <constraint firstAttribute="centerY" secondItem="EJS-lJ-alB" secondAttribute="centerY" constant="250" id="CTE-uW-T03"/>
-                            <constraint firstAttribute="centerX" secondItem="16a-h8-oT0" secondAttribute="centerX" id="EHr-Iq-L6f"/>
+                            <constraint firstItem="lkU-y8-8iW" firstAttribute="centerX" secondItem="WgO-Yh-rLt" secondAttribute="centerX" id="FaV-gH-Mfo"/>
                             <constraint firstAttribute="centerY" secondItem="AGF-hg-7Tl" secondAttribute="centerY" constant="-27" id="HmR-z8-9gd"/>
                             <constraint firstAttribute="centerX" secondItem="AGF-hg-7Tl" secondAttribute="centerX" id="LwU-uJ-6yD"/>
+                            <constraint firstItem="lkU-y8-8iW" firstAttribute="leading" secondItem="keT-B5-0Du" secondAttribute="leading" id="PiT-Rt-GA0"/>
+                            <constraint firstItem="l3Y-tz-r6N" firstAttribute="top" secondItem="keT-B5-0Du" secondAttribute="bottom" constant="72" id="S95-io-Cpi"/>
                             <constraint firstAttribute="centerY" secondItem="WgO-Yh-rLt" secondAttribute="centerY" constant="205" id="c0U-Yr-tsJ"/>
+                            <constraint firstItem="lkU-y8-8iW" firstAttribute="top" secondItem="WgO-Yh-rLt" secondAttribute="bottom" constant="8" symbolic="YES" id="eU3-x4-8pX"/>
+                            <constraint firstItem="keT-B5-0Du" firstAttribute="top" secondItem="AGF-hg-7Tl" secondAttribute="bottom" constant="8" symbolic="YES" id="f7A-ha-yb6"/>
                             <constraint firstAttribute="centerX" secondItem="EJS-lJ-alB" secondAttribute="centerX" id="fUS-zA-6xH"/>
+                            <constraint firstItem="lkU-y8-8iW" firstAttribute="trailing" secondItem="keT-B5-0Du" secondAttribute="trailing" id="kfs-Zl-BQg"/>
                             <constraint firstItem="WgO-Yh-rLt" firstAttribute="top" secondItem="EJS-lJ-alB" secondAttribute="bottom" id="nAa-FO-AH2"/>
+                            <constraint firstItem="AGF-hg-7Tl" firstAttribute="top" secondItem="lkU-y8-8iW" secondAttribute="bottom" constant="8" symbolic="YES" id="qwP-ai-gJ7"/>
                             <constraint firstItem="WgO-Yh-rLt" firstAttribute="top" secondItem="EJS-lJ-alB" secondAttribute="bottom" id="xun-Vw-hsl"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="songOneImage" destination="LmT-OC-sav" id="GBl-H5-fPy"/>
+                        <outlet property="songOneButton" destination="lkU-y8-8iW" id="cyM-on-gKZ"/>
                         <outlet property="songOneLabel" destination="WgO-Yh-rLt" id="llr-pg-GLq"/>
-                        <outlet property="songTwoImage" destination="16a-h8-oT0" id="2gX-Ao-cey"/>
+                        <outlet property="songTwoButton" destination="keT-B5-0Du" id="ZCh-du-hUs"/>
                         <outlet property="songTwoLabel" destination="AGF-hg-7Tl" id="UjL-hd-Uot"/>
                     </connections>
                 </viewController>
