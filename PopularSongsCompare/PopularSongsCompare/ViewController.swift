@@ -96,18 +96,11 @@ class ViewController: UIViewController {
       
         imageURL1.observeEventType(FEventType.Value, withBlock: { (snapshot) in
             var url = snapshot.value["label"] as? String
-            
-            println("url: " + url!)
-            
-            let nsurl = NSURL(fileURLWithPath: url!);
+            let nsurl = NSURL(string: url!);
             var err: NSError?
             var imageData : NSData? = NSData(contentsOfURL: nsurl!)
-            // !, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err!)
             var image : UIImage? = UIImage(data:imageData!)
             self.songOneImage.image = UIImage(data:imageData!)
-            
-
-
         })
     
         songURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
@@ -115,13 +108,15 @@ class ViewController: UIViewController {
             var title  = snapshot.value["label"] as? String
             self.songTwoLabel.text = title
         })
-        /*
+        
         imageURL2.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            var url =  snapshot.value["label"] as? String
-            var img = UIImage(named: url!)
-            self.songTwoImage.image = img
-            
-        })*/
+            var url = snapshot.value["label"] as? String
+            let nsurl = NSURL(string: url!);
+            var err: NSError?
+            var imageData : NSData? = NSData(contentsOfURL: nsurl!)
+            var image : UIImage? = UIImage(data:imageData!)
+            self.songTwoImage.image = UIImage(data:imageData!)
+        })
         
     }
      override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
