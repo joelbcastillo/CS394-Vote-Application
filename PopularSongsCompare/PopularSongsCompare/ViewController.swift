@@ -52,27 +52,33 @@ class ViewController: UIViewController {
                 println("votes == nil")
             }
         })
-//        votes = votes + 1
+        votes = votes! + 1
         votesURL.setValue(votes)
     }
     
     @IBAction func songTwoButton(sender: AnyObject) {
         var votesURL = myRootRef.childByAppendingPath("feed/entry/\(String(self.id2))")
-        var votes:Int = 0
-        
+        var votes : Int? = 0
         votesURL.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-//            votes = snapshot.value["votes"] as Int
-            
+            votes = snapshot.value["votes"] as? Int
+            println("url: " + votesURL.debugDescription)
+            if (votes != nil) {
+                // var votes = snapshot.value["votes"] as Int
+                println("votes: " + String(votes!))
+                votes = votes! + 1
+                votesURL.setValue(votes!)
+                println("votes changed")
+            } else {
+                println("votes == nil")
+            }
         })
-        
-        votes = votes + 1
+        votes = votes! + 1
         votesURL.setValue(votes)
         
     }
     
     func get_two_songs(){
-        self.id1 = 0
-            //randomIndex()
+        self.id1 = randomIndex()
         
         do {
             self.id2 = randomIndex()
